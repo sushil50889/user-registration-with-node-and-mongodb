@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+<!-- //_______________________________________________//
+     //***********************************************//
+     //   User Edit Form
+     //_______________________________________________//
+     //***********************************************// -->
+
+<div class="container">
+  <div class="w-50 mx-auto">
+    <div class="form-heading text-center my-4">
+        <h1 class="display-4">Edit User Details</h1>
+    </div>
+      <div class="form">
+          <form action="/user/update-data/<%= user._id %>" method="post" id="userUpdateForm">
+            <div class="form-group">
+                <label class="control-label text-capitalize">user name</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+                    <input class="form-control" type="text" name="uname" value="<%= user.uname %>">
+                </div>
+            </div>
+              <div class="form-group">
+                  <label class="control-label text-capitalize">first name</label>
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                      <input class="form-control" type="text" name="fname" value="<%= user.fname %>">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label text-capitalize">last name</label>
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                      <input class="form-control" type="text" name="lname" value="<%= user.lname %>">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label text-capitalize">e-mail</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></i></span>
+                    <input class="form-control" type="email" name="email" value="<%= user.email %>">
+                </div>
+            </div>
+                <input class="btn btn-info btn-lg btn-block mt-3" type="submit" value="Save">
+          </form>
+      </div>
+  </div>
+</div>
+
+<% include partials/footer %>

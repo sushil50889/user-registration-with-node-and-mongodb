@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<!-- //_______________________________________________//
+     //***********************************************//
+     //   Showing User Details
+     //_______________________________________________//
+     //***********************************************// -->
+
+<section class="container">
+  <div class="w-75 mx-auto">
+    <h1 class="display-4 text-center">User Details</h1>
+    <ul class="list-unstyled list-group">
+        <li class="media list-group-item my-1 p-2">
+          <img class="mr-3 float-left img-size-2" src="/images/profile-pic.png" alt="profile image">
+          <div class="media-body">
+            <h4 class="mt-0 mb-1">Name :   <%= user.fname +" "+ user.lname %></h4>
+            <p class="mb-1 p-0">User Name :   <%= user.uname %></p>
+            <p class="mb-1 p-0">First Name :   <%= user.fname %></p>
+            <p class="mb-1 p-0">Last Name :   <%= user.lname %></p>
+            <p class="mb-1 p-0">E-mail :   <%= user.email %></p>
+            <a class="position-absolute btn-pos-1" href="/user/edit/<%= user._id %>"><button type="button" class="btn btn-outline-info btn-sm">Edit</button></a>
+            <a class="position-absolute btn-pos-1 mt-4" href="/user/delete/<%= user._id %>"><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></a>
+          </div>
+        </li>
+    </ul>
+  </div>
+</section>
+
+<% include partials/footer %>

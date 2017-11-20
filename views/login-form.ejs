@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+<!-- //_______________________________________________//
+     //***********************************************//
+     //   Login form
+     //_______________________________________________//
+     //***********************************************// -->
+    <div class="container">
+      <div class="rounded p-5 my-5 mx-auto bg-col-sha-w">
+        <div class="form-heading text-center">
+            <span class="display-3"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+            <h1 class="display-4">Login</h1>
+        </div>
+          <div class="form">
+              <form action="/login" method="post">
+                <div class="form-group">
+                    <label class="control-label text-capitalize">user name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+                        <input class="form-control" type="text" name="name" placeholder="User Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label text-capitalize">password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        <input class="form-control" type="password" name="pass" placeholder="Password" required>
+                    </div>
+                </div>
+                    <input class="btn btn-info btn-lg pull-right" type="submit" value="Login">
+              </form>
+                    <a href="/registration-form">New User? Please Register.</a>
+          </div>
+
+      </div>
+
+</div>
+
+<% include partials/footer %>

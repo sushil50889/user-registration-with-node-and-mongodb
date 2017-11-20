@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<!-- //_______________________________________________//
+     //***********************************************//
+     //   Showing User List
+     //_______________________________________________//
+     //***********************************************// -->
+
+<section class="container">
+  <div class="w-75 mx-auto">
+    <h1 class="display-4 text-center">User List</h1>
+    <ul class="list-unstyled list-group">
+      <% for(var i=0; i < user.length; i++){%>
+        <li class="media list-group-item my-1 p-2">
+          <img class="mr-3 float-left img-size" src="/images/profile-pic.png" alt="profile image">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1"><%= user[i].fname +" "+ user[i].lname %></h5>
+            <p><%= user[i].email %></p>
+            <a href="/user/details/<%= user[i]._id %>"><button type="button" class="btn btn-outline-info btn-sm pull-left ml-1">Details</button></a>
+            <a href="/user/edit/<%= user[i]._id %>"><button type="button" class="btn btn-outline-info btn-sm pull-left ml-1">Edit</button></a>
+            <a href="/user/delete/<%= user[i]._id %>"><button type="button" class="btn btn-outline-danger btn-sm pull-right">Delete</button></a>
+          </div>
+        </li>
+      <%}%>
+    </ul>
+  </div>
+</section>
+
+<% include partials/footer %>
